@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "id.or.sutanto.boilerplate"
+    namespace = "id.or.sutanto.sibori"
     compileSdk = 34
     
     defaultConfig {
-        applicationId = "id.or.sutanto.boilerplate"
+        applicationId = "id.or.sutanto.sibori"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

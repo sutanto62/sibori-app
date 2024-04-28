@@ -1,4 +1,4 @@
-package id.or.sutanto.boilerplate
+package id.or.sutanto.sibori
 
 import org.junit.Test
 

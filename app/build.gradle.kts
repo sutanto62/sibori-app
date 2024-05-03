@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.googleDevtoolsKsp)
     alias(libs.plugins.googleService)
     alias(libs.plugins.crashlytics)
+    alias(libs.plugins.hiltAndroid)
 }
 
 android {
@@ -30,6 +31,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -82,4 +84,12 @@ dependencies {
         exclude(group = "com.intellij", module = "annotations")
     }
     ksp(libs.room.compiler)
+    
+    // Dependency Injection Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    
+    // Internal module dependency
+    // implementation(project(":core:analytics"))
+    
 }

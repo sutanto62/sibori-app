@@ -3,6 +3,7 @@ agp = "8.3.2"
 firebaseBom = "33.0.0"
 firebaseCrashlytics = "19.0.0"
 firebaseCrashlyticsPlugin = "2.9.9"
+hiltAndroidVersion = "2.51"
 kotlin = "1.9.23"
 coreKtx = "1.13.0"
 junit = "4.13.2"
@@ -14,12 +15,17 @@ composeBom = "2024.04.01"
 roomVersion = "2.6.1"
 googleDevtoolsKsp = "1.9.23-1.0.20"
 googleService = "4.4.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+hiltAndroid = "2.51"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics", version.ref = "firebaseCrashlytics" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroidVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -35,11 +41,15 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
-crashlytics = { id= "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "googleDevtoolsKsp" }
 googleService = { id = "com.google.gms.google-services", version.ref = "googleService" }

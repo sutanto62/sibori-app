@@ -23,8 +23,14 @@ android {
             useSupportLibrary = true
         }
     }
-    
+    // Enable BuildConfig checking
+    buildFeatures {
+        buildConfig = true
+    }
     buildTypes {
+        debug {
+        
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -90,6 +96,6 @@ dependencies {
     ksp(libs.hilt.compiler)
     
     // Internal module dependency
-    // implementation(project(":core:analytics"))
+    implementation(project(":core:analytics"))
     
 }

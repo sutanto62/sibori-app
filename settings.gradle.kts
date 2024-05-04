@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "sibori"
 include(":app")
+include(":core:analytics")

@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import id.or.sutanto.core.analytics.AnalyticsHelper
 import id.or.sutanto.core.analytics.NoOpAnalyticsHelper
 import id.or.sutanto.sibori.ui.screen.HomeScreen
-import id.or.sutanto.sibori.ui.theme.SiboriTheme
+import id.or.sutanto.core.designsystem.theme.SiboriTheme
 import javax.inject.Inject
 
 @AndroidEntryPoint

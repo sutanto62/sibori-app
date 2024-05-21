@@ -3,12 +3,12 @@ package id.or.sutanto.sibori.ui.screen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import id.or.sutanto.core.analytics.AnalyticsHelper
+import id.or.sutanto.core.designsystem.component.SiboriButton
 import id.or.sutanto.sibori.logScreenView
 import id.or.sutanto.sibori.logUserAction
 
@@ -22,11 +22,11 @@ fun HomeScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Button(
+        SiboriButton(
             onClick = {
                 analyticsHelper.logUserAction("button test_crash")
                 throw RuntimeException("Test Crash")
-            },
+            }
         ) {
             Text(text = "Test Crash")
         }

@@ -1,4 +1,4 @@
-package id.or.sutanto.sibori.ui.theme
+package id.or.sutanto.core.designsystem.theme
 
 import android.app.Activity
 import android.os.Build

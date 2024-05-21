@@ -1,11 +1,10 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.crashlytics)
 }
 
 android {
-    namespace = "id.or.sutanto.core.analytics"
+    namespace = "id.or.sutanto.core.designsystem"
     compileSdk = 34
     
     defaultConfig {
@@ -13,6 +12,14 @@ android {
         
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+    }
+    
+    buildFeatures {
+        compose = true
+    }
+    
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.12"
     }
     
     buildTypes {
@@ -35,14 +42,15 @@ android {
 
 dependencies {
     
+    api(libs.androidx.foundation.android)
+    api(libs.androidx.runtime.android)
+    api(libs.androidx.ui.android)
+    api(libs.androidx.material3.android)
+    api(libs.androidx.foundation.layout.android)
+    
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    
-    // Firebase SDK
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.crashlytics)
-    implementation(libs.firebase.analytics)
 }
